@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const header = document.querySelector(".animated-header");
+    const header = document.querySelector(".white-header");
     window.addEventListener("scroll", function() {
         if (window.scrollY > 50) {
             header.classList.add("scrolled");
@@ -31,5 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 }, 300);
             }
         });
+    });
+
+    // Reviews Section Animation
+    const reviews = document.querySelectorAll(".review-card");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("slide-in");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    reviews.forEach(review => {
+        observer.observe(review);
     });
 });
