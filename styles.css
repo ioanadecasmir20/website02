@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #e0f2f1; /* Light green background to match the theme */
     color: #333;
     overflow-x: hidden;
     opacity: 0;
@@ -12,6 +12,7 @@ body {
 
 h1, h2, h3 {
     text-align: center;
+    color: #004d40;
 }
 
 /* Header Styling - White Theme */
@@ -54,20 +55,15 @@ h1, h2, h3 {
     color: #2e7d32;
 }
 
-/* Green Theme for Content */
-.green-theme {
-    background: #e0f2f1;
-    padding: 50px 5%;
-    text-align: center;
-}
-
 /* Hero Section */
 #hero {
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #004d40;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
 }
 
 .btn {
@@ -91,6 +87,9 @@ h1, h2, h3 {
     max-width: 1200px;
     margin: auto;
     justify-content: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .service-card {
@@ -121,6 +120,9 @@ h1, h2, h3 {
     flex-wrap: wrap;
     max-width: 1000px;
     margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .review-card {
