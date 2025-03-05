@@ -28,7 +28,6 @@ p {
 }
 
 /* Header Styling - White Theme */
-/* Header Styling - White Theme */
 .white-header {
     background: white;
     padding: 15px 5%;
@@ -42,9 +41,9 @@ p {
     z-index: 1000;
 }
 
-/* Logo */
+/* Logo - Move it slightly left */
 .white-header .logo {
-    flex: 1; /* Allows it to take available space */
+    flex: 1;
 }
 
 /* Adjust Logo Size */
@@ -53,26 +52,38 @@ p {
     height: auto;
 }
 
-/* Navigation - Centered */
+/* Navigation */
 .white-header nav {
-    flex: 2; /* Gives more space to the nav */
+    flex: 2;
     display: flex;
-    justify-content: center; /* Center the menu */
+    justify-content: center; /* Center menu */
 }
 
 .white-header nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Increase spacing between menu items */
+    gap: 30px; /* More spacing between menu items */
     padding: 0;
     margin: 0;
 }
 
-/* Contact Button - Aligned to the Right */
+.white-header nav a {
+    color: #004d40;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.white-header nav a:hover {
+    color: #2e7d32;
+}
+
+/* Contact Button - Aligns to Right */
 .header-contact {
-    flex: 1; /* Takes space and pushes to the right */
+    flex: 1;
     display: flex;
-    justify-content: flex-end; /* Aligns button to the right */
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -84,17 +95,13 @@ p {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    white-space: nowrap; /* Prevents button text from breaking */
 }
 
 .phone-btn:hover {
     background: #2e7d32;
 }
 
-/* Ensure everything stays in place on smaller screens */
 @media (max-width: 1024px) {
     .white-header {
         flex-direction: column;
