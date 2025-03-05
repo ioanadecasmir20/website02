@@ -44,6 +44,8 @@ p {
 /* Logo - Move it slightly left */
 .white-header .logo {
     flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 /* Adjust Logo Size */
