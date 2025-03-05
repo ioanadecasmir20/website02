@@ -35,30 +35,34 @@ p {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 5%;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
+/* Logo - Move it slightly left */
 .white-header .logo {
-    margin-right: 20px;
+    margin-right: auto; /* Pushes menu towards the center */
 }
 
+/* Adjust Logo Size */
 .white-header .logo img {
     max-width: 140px;
     height: auto;
 }
 
+/* Navigation */
 .white-header nav {
     flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center menu */
 }
 
 .white-header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px; /* More spacing between menu items */
     padding: 0;
     margin: 0;
 }
@@ -73,6 +77,28 @@ p {
 
 .white-header nav a:hover {
     color: #2e7d32;
+}
+
+/* Contact Button - Aligns to Right */
+.header-contact {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.phone-btn {
+    background: #004d40;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* Prevents button text from breaking */
+}
+
+.phone-btn:hover {
+    background: #2e7d32;
 }
 
 /* Hero Section */
