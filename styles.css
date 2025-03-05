@@ -43,7 +43,7 @@ p {
 
 /* Logo - Move it slightly left */
 .white-header .logo {
-    margin-right: auto; /* Pushes menu towards the center */
+    flex: 1;
 }
 
 /* Adjust Logo Size */
@@ -54,7 +54,7 @@ p {
 
 /* Navigation */
 .white-header nav {
-    flex-grow: 1;
+    flex: 2;
     display: flex;
     justify-content: center; /* Center menu */
 }
@@ -81,8 +81,9 @@ p {
 
 /* Contact Button - Aligns to Right */
 .header-contact {
-    margin-left: auto;
+    flex: 1;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -99,6 +100,22 @@ p {
 
 .phone-btn:hover {
     background: #2e7d32;
+}
+
+@media (max-width: 1024px) {
+    .white-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .white-header nav {
+        margin-top: 10px;
+    }
+
+    .header-contact {
+        margin-top: 10px;
+        justify-content: center;
+    }
 }
 
 /* Hero Section */
