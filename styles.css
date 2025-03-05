@@ -208,7 +208,6 @@ footer {
 }
 
 #hero, #services-preview, #reviews {
-    margin-top: 80px; /* Adjust based on your header height */
     color: #004d40; /* Dark green text for contrast */
     min-height: 300px; /* Ensures visibility */
 }
