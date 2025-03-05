@@ -10,12 +10,6 @@ body {
     animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
 h1, h2, h3 {
     text-align: center;
     color: #004d40;
@@ -34,6 +28,10 @@ h1, h2, h3 {
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+.white-header .logo {
+    margin-left: auto; /* Moves logo to the right */
 }
 
 .white-header .logo img {
@@ -182,8 +180,23 @@ footer {
     text-align: center;
 }
 
+/* Hide Mobile Menu Toggle on Desktop */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block; /* Only show toggle on smaller screens */
+    }
+    .white-header nav {
+        display: none; /* Hide nav on small screens */
+    }
+    .white-header nav.active {
+        display: block;
+    }
+}
+
 #hero, #services-preview, #reviews {
     margin-top: 80px; /* Adjust based on your header height */
-    color: #004d40; /* Dark green text for contrast */
-    min-height: 300px; /* Ensures visibility */
 }
