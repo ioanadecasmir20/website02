@@ -168,3 +168,14 @@ footer {
     margin-top: 20px;
     font-size: 14px;
 }
+
+.green-theme {
+    background: #e0f2f1; /* Light green */
+    color: #004d40; /* Dark green text */
+    padding: 50px 5%;
+    text-align: center;
+}
+
+#hero, #services-preview, #reviews {
+    margin-top: 80px; /* Adjust based on your header height */
+}
