@@ -117,23 +117,68 @@ p {
 }
 
 /* ✅ Mobile Optimization */
-@media (max-width: 1024px) {
+/* Adjust Logo Size on Mobile */
+@media (max-width: 768px) {
     .white-header {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
-    }
-    
-    .white-header nav {
-        margin-top: 10px;
-        justify-content: center;
-        width: 100%;
+        padding: 10px 5%;
     }
 
+    .white-header .logo img {
+        max-width: 100px; /* Reduce logo size */
+        height: auto;
+    }
+
+    /* Hide Desktop Menu on Mobile */
+    .white-header nav {
+        display: none;
+    }
+
+    /* Show Menu When Active */
+    .white-header nav.active {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .white-header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .white-header nav ul li {
+        text-align: center;
+    }
+
+    /* Hamburger Icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #004d40;
+    }
+
+    /* Move Phone Button into Menu */
     .header-contact {
-        margin-top: 10px;
+        display: none;
+    }
+
+    .white-header nav.active .header-contact {
+        display: flex;
         justify-content: center;
-        width: 100%;
+        margin-top: 10px;
     }
 }
 
