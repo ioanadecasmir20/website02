@@ -764,9 +764,22 @@ footer {
     }
 
     .service-carousel img {
-        position: relative; /* ✅ Prevents images from disappearing */
+        position: absolute; /* ✅ Ensures images stack on top of each other */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ✅ Ensures full image display */
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+
+    .service-carousel img.active {
+        opacity: 1; /* ✅ Only active image is visible */
+        position: relative; /* ✅ Keeps it in the correct flow */
         display: block;
     }
+
 
     .btn {
         width: 100%;
