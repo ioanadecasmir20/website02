@@ -65,11 +65,21 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentIndex = 0;
 
         function showNextImage() {
-            images[currentIndex].classList.remove("active");
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add("active");
+            if (images.length === 0) return; // ✅ Prevents errors if there are no images
+
+            // ✅ Ensure all images exist before modifying classList
+            let currentImage = images[currentIndex];
+            let nextIndex = (currentIndex + 1) % images.length;
+            let nextImage = images[nextIndex];
+
+            if (currentImage && nextImage) {
+                currentImage.classList.remove("active");
+                nextImage.classList.add("active");
+            }
+
+            currentIndex = nextIndex; // ✅ Update index
         }
 
-        setInterval(showNextImage, 4000); // Slower transition every 4 seconds
+        setInterval(showNextImage, 4000); // ✅ Slow transition every 4 seconds
     });
 });
