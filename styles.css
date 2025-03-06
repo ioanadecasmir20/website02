@@ -116,8 +116,16 @@ p {
     background: #2e7d32;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #004d40;
+}
+
 /* ✅ Mobile Optimization */
-/* Adjust Logo Size on Mobile */
 @media (max-width: 768px) {
     .white-header {
         display: flex;
@@ -127,18 +135,20 @@ p {
     }
 
     .white-header .logo img {
-        max-width: 100px; /* Reduce logo size */
+        max-width: 100px;
         height: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
     }
 
     /* Hide Desktop Menu on Mobile */
     .white-header nav {
         display: none;
-    }
-
-    /* Show Menu When Active */
-    .white-header nav.active {
-        display: flex;
         flex-direction: column;
         background: white;
         position: absolute;
@@ -147,6 +157,12 @@ p {
         width: 200px;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Show Menu When Active */
+    .white-header nav.active {
+        display: flex;
     }
 
     .white-header nav ul {
