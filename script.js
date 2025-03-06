@@ -47,17 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(review);
     });
 
-    let slides = document.querySelectorAll(".carousel-slide");
-    let currentIndex = 0;
-
-    function showNextSlide() {
-        slides[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add("active");
-    }
-
-    setInterval(showNextSlide, 4000);
-
     const carousels = document.querySelectorAll(".service-carousel");
 
     carousels.forEach(carousel => {
