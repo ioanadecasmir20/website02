@@ -894,11 +894,9 @@ footer {
 
 /* ✅ Hero Section */
 #contact-hero {
-    background: none; /* Removes background color */
+    background: white;
     text-align: center;
     padding: 60px 5%;
-    border-bottom: 4px solid #004d40; /* Dark green separator line */
-    color: #004d40; /* Matches other pages */
 }
 
 /* ✅ Contact Details Row */
@@ -915,22 +913,24 @@ footer {
 /* ✅ Contact Cards */
 .contact-card {
     background: white;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
-    min-width: 250px;
-    flex: 1;
+    transition: transform 0.3s ease-in-out;
 }
 
 .contact-card h2 {
-    font-size: 20px;
+    font-size: 18px;
     color: #004d40;
+    margin-bottom: 10px;
 }
 
-.contact-card p {
+/* ✅ Paragraph Text */
+.contact-card p, .contact-card ul {
     font-size: 14px;
     color: #333;
+    text-align: center;
 }
 
 /* ✅ Links Styling (Match Other Pages) */
@@ -938,7 +938,6 @@ footer {
     color: #004d40;
     font-weight: 600;
     text-decoration: none;
-    font-size: 14px;
     transition: color 0.3s ease-in-out;
 }
 
@@ -950,7 +949,7 @@ footer {
 /* ✅ Information Cards */
 #contact-info .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 1200px;
     margin: auto;
