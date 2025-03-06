@@ -413,6 +413,24 @@ footer {
         text-align: center;
         margin-bottom: 10px;
     }
+
+    /* ✅ Ensure the phone number in the footer stays white */
+    .footer-contact p,
+    .footer-contact a {
+        color: white !important;
+        text-decoration: none;
+    }
+
+    .footer-contact a[href^="tel"] {
+        color: white !important;
+        text-decoration: none;
+        font-weight: normal;
+        pointer-events: none;
+    }
+
+    .footer-contact a[href^="tel"]:hover {
+        text-decoration: none;
+    }
 }
 
 #hero, #services-preview, #reviews {
