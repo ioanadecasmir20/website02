@@ -901,10 +901,9 @@ footer {
 
 /* ✅ Contact Details Row */
 #contact-details .container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ✅ Auto adjusts based on screen size */
     gap: 20px;
-    flex-wrap: wrap;
     max-width: 1100px;
     margin: auto;
     padding: 40px 5%;
@@ -938,18 +937,19 @@ footer {
     color: #004d40;
     font-weight: 600;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    border-bottom: 1px solid transparent; /* ✅ Subtle underline effect */
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
 .contact-card a:hover {
-    color: #2e7d32; /* Matches hover styles on other pages */
-    text-decoration: underline;
+    color: #2e7d32; /* ✅ Matches hover styles on other pages */
+    border-bottom: 1px solid #2e7d32;
 }
 
 /* ✅ Information Cards */
 #contact-info .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ✅ Auto adjusts layout */
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -974,10 +974,16 @@ footer {
     color: #333;
 }
 
-/* ✅ Responsive */
+/* ✅ Responsive Layout */
+@media (max-width: 1024px) {
+    #contact-info .container {
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 cards per row on medium screens */
+    }
+}
+
 @media (max-width: 768px) {
     #contact-details .container,
     #contact-info .container {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* ✅ 1 card per row on small screens */
     }
 }
