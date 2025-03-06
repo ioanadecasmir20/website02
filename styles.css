@@ -639,86 +639,87 @@ footer {
     margin-bottom: 40px;
 }
 
+/* Service Section */
 .service {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    background: #f9f9f9;
-    padding: 30px;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .service-carousel {
-    flex: 1;
     position: relative;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
+    width: 600px;
+    height: 400px;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .service-carousel img {
+    position: absolute;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: none;
-    transition: opacity 0.5s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Slower transition */
 }
 
 .service-carousel img.active {
-    display: block;
-}
-
-
-.service-content p, 
-.service-content ul {
-    line-height: 1.8; /* Increases line spacing */
-    margin-bottom: 10px; /* Adds spacing between elements */
-}
-
-.service-content ul {
-    padding-left: 20px;
-}
-
-.service-content ul li {
-    margin-bottom: 8px; /* Space between list items */
+    opacity: 1;
 }
 
 .service-content {
     flex: 1;
-    text-align: left;
 }
 
 .service-content h3 {
-    font-size: 22px;
+    font-size: 1.8rem;
     color: #004d40;
-    margin-bottom: 10px;
 }
 
-.service-content p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.5;
-    margin-bottom: 15px;
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    font-size: 1.2rem;
+    line-height: 2; /* Adds more spacing between lines */
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Make the button stay at the bottom */
+.btn-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
 
 .btn {
     background: #004d40;
-    padding: 10px 20px;
+    padding: 12px 20px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     transition: background 0.3s ease;
+    font-weight: bold;
 }
 
 .btn:hover {
     background: #2e7d32;
 }
 
-/* Responsive Layout */
+/* Responsive for Mobile */
 @media (max-width: 768px) {
     .service {
         flex-direction: column;
@@ -726,10 +727,16 @@ footer {
     }
 
     .service-carousel {
-        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 
-    .service-content {
-        text-align: center;
+    .service-content ul li {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .btn-container {
+        justify-content: center;
     }
 }
