@@ -126,12 +126,15 @@ p {
 }
 
 /* ✅ Mobile Optimization */
+/* ✅ Mobile Optimization */
 @media (max-width: 768px) {
     .white-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 5%;
+        position: relative;
+        z-index: 1000; /* ✅ Ensures it stays on top */
     }
 
     .white-header .logo img {
@@ -144,39 +147,50 @@ p {
         position: absolute;
         right: 15px;
         top: 15px;
+        z-index: 1100; /* ✅ Ensures toggle is always visible */
     }
 
-    /* Hide Desktop Menu on Mobile */
+    /* ✅ Mobile Menu - Now Covers Entire Width */
     .white-header nav {
         display: none;
         flex-direction: column;
         background: white;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        width: 200px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        border-radius: 5px;
+        position: fixed; /* ✅ Fixed position so it stays above everything */
+        top: 50px; /* ✅ Below the header */
+        left: 0;
+        width: 100%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-radius: 0 0 10px 10px;
+        z-index: 1050; /* ✅ Ensures it opens on top */
     }
 
-    /* Show Menu When Active */
+    /* ✅ Show Menu When Active */
     .white-header nav.active {
         display: flex;
     }
 
     .white-header nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         padding: 0;
         margin: 0;
-    }
-
-    .white-header nav ul li {
         text-align: center;
     }
 
-    /* Hamburger Icon */
+    .white-header nav ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd; /* ✅ Adds separation */
+        width: 90%;
+        margin: auto;
+    }
+
+    /* ✅ Remove border from last item */
+    .white-header nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    /* ✅ Hamburger Icon */
     .menu-toggle {
         display: block;
         font-size: 24px;
@@ -186,7 +200,7 @@ p {
         color: #004d40;
     }
 
-    /* Move Phone Button into Menu */
+    /* ✅ Move Phone Button into Menu */
     .header-contact {
         display: none;
     }
