@@ -39,6 +39,7 @@ p {
     top: 0;
     left: 0;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
 /* Logo - Move it slightly left */
@@ -46,6 +47,7 @@ p {
     flex: 1; 
     display: flex;
     align-items: center;
+    min-width: 150px;
 }
 
 /* Adjust Logo Size */
@@ -58,15 +60,17 @@ p {
 .white-header nav {
     flex: 2;
     display: flex;
-    justify-content: center; /* Center menu */
+    justify-content: center;
+    min-width: 300px;
 }
 
 .white-header nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* More spacing between menu items */
+    gap: 20px; 
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .white-header nav a {
@@ -87,6 +91,7 @@ p {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    min-width: 180px;
 }
 
 .phone-btn {
@@ -97,7 +102,10 @@ p {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
-    white-space: nowrap; /* Prevents button text from breaking */
+    white-space: nowrap;
+    font-size: 14px;
+    max-width: 100%;
+    text-align: center;
 }
 
 .phone-btn:hover {
@@ -108,15 +116,19 @@ p {
     .white-header {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
     
     .white-header nav {
         margin-top: 10px;
+        justify-content: center;
+        width: 100%;
     }
 
     .header-contact {
         margin-top: 10px;
         justify-content: center;
+        width: 100%;
     }
 }
 
