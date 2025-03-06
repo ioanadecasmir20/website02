@@ -406,3 +406,78 @@ footer {
     color: #004d40; /* Dark green text for contrast */
     min-height: 300px; /* Ensures visibility */
 }
+
+/* ✅ About Us Hero Section */
+#about-hero {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/about-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+/* ✅ Introduction Section */
+#about-intro {
+    padding: 60px 5%;
+    background: white;
+    text-align: center;
+}
+
+#about-intro p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ✅ Our Values Section */
+#our-values {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.value-card {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.value-card h3 {
+    color: #004d40;
+}
+
+/* ✅ Why Choose Us */
+#why-choose-us {
+    padding: 60px 5%;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+#why-choose-us ul {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    font-size: 18px;
+    list-style: none;
+    padding: 0;
+}
+
+#why-choose-us ul li {
+    background: url('images/checkmark.png') no-repeat left center;
+    background-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
