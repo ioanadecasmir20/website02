@@ -640,7 +640,6 @@ footer {
 }
 
 /* Service Section */
-/* Service Section */
 .service {
     display: flex;
     align-items: center;
@@ -735,6 +734,8 @@ footer {
     max-width: 250px;
     text-align: center;
     transition: background 0.3s ease;
+    width: 100%;
+    max-width: 100%;
 }
 
 .btn:hover {
