@@ -580,3 +580,49 @@ footer {
     }
 }
 
+#our-partners {
+    padding: 60px 5%;
+    text-align: center;
+    background: white; /* Clean white background */
+}
+
+#our-partners h2 {
+    color: #004d40;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.partners-grid img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.partners-grid img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .partners-grid {
+        gap: 20px;
+    }
+    .partners-grid img {
+        max-width: 120px; /* Smaller logos on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-grid img {
+        max-width: 100px; /* Further reduced for small screens */
+    }
+}
