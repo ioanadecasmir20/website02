@@ -763,6 +763,11 @@ footer {
         margin-left: 0;
     }
 
+    .service-carousel img {
+        position: relative; /* ✅ Prevents images from disappearing */
+        display: block;
+    }
+
     .btn {
         width: 100%;
         max-width: 100%;
