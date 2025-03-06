@@ -61,13 +61,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const carousels = document.querySelectorAll(".service-carousel");
 
     carousels.forEach(carousel => {
-        let images = carousel.querySelectorAll("img");
+        const images = carousel.querySelectorAll("img");
         let currentIndex = 0;
 
-        setInterval(() => {
+        function showNextImage() {
             images[currentIndex].classList.remove("active");
             currentIndex = (currentIndex + 1) % images.length;
             images[currentIndex].classList.add("active");
-        }, 3000); // Change image every 3 seconds
+        }
+
+        setInterval(showNextImage, 4000); // Slower transition every 4 seconds
     });
 });
