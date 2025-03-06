@@ -672,6 +672,21 @@ footer {
     display: block;
 }
 
+
+.service-content p, 
+.service-content ul {
+    line-height: 1.8; /* Increases line spacing */
+    margin-bottom: 10px; /* Adds spacing between elements */
+}
+
+.service-content ul {
+    padding-left: 20px;
+}
+
+.service-content ul li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
 .service-content {
     flex: 1;
     text-align: left;
