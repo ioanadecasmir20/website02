@@ -817,7 +817,7 @@ footer {
 /* ✅ Job Image - Static */
 .job-image {
     flex: 1;
-    max-width: 40%; /* ✅ Ensures half-container width */
+    width: 100%;
     height: auto;
     overflow: hidden;
     border-radius: 10px;
