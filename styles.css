@@ -811,13 +811,14 @@ footer {
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row-reverse;
 }
 
 /* ✅ Job Image - Static */
 .job-image {
-    flex-shrink: 0;
-    width: 400px;
-    height: 280px;
+    flex: 1;
+    max-width: 50%; /* ✅ Ensures half-container width */
+    height: auto;
     overflow: hidden;
     border-radius: 10px;
 }
