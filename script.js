@@ -16,27 +16,18 @@ document.addEventListener("DOMContentLoaded", function() {
         menuToggle.addEventListener("click", function () {
             mobileMenu.classList.toggle("active");
         });
-
-        // Close menu when clicking outside
-        document.addEventListener("click", function(event) {
-            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                mobileMenu.classList.remove("active");
-            }
-        });
     }
 
-    // Smooth Page Transitions (Internal Links Only)
+    // Smooth Page Transitions
     const links = document.querySelectorAll("a");
     links.forEach(link => {
         link.addEventListener("click", function(event) {
-            const href = this.getAttribute("href");
-
-            // Prevent fade for external links and anchors
-            if (!href.startsWith("#") && href.startsWith(window.location.origin)) {
-                event.preventDefault();
+            if (this.getAttribute("href") !== "#") {
+                event.preventDefault(); // Stop default navigation
+                const href = this.getAttribute("href");
                 document.body.classList.add("fade-out");
                 setTimeout(() => {
-                    window.location.href = href;
+                    window.location.href = href; // Navigate after fade effect
                 }, 300);
             }
         });
@@ -48,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("slide-in");
-                observer.unobserve(entry.target); // Ensures animation runs only once
             }
         });
     }, { threshold: 0.3 });
@@ -57,15 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(review);
     });
 
-    // Service Carousel
     const carousels = document.querySelectorAll(".service-carousel");
-    const intervals = [];
 
     carousels.forEach(carousel => {
         const images = carousel.querySelectorAll("img");
         let currentIndex = 0;
 
-        if (images.length < 2) return;
+        if (images.length < 2) return; // ✅ Prevents running on single-image carousels
 
         function showNextImage() {
             images[currentIndex].classList.remove("active");
@@ -73,12 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             images[currentIndex].classList.add("active");
         }
 
-        const interval = setInterval(showNextImage, 4000);
-        intervals.push(interval);
-    });
-
-    // Clear intervals on page unload
-    window.addEventListener("beforeunload", () => {
-        intervals.forEach(clearInterval);
+        // ✅ Set a unique interval for each carousel
+        setInterval(showNextImage, 4000);
     });
 });
