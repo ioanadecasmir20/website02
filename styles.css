@@ -652,57 +652,64 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Fix Image Size */
+/* Fix Image Size - Ensure Full Display */
 .service-carousel {
     position: relative;
-    width: 500px;
-    height: 350px;
+    width: 500px; /* Fixed width */
+    height: auto; /* Allow height to adjust */
     overflow: hidden;
     border-radius: 10px;
 }
 
 .service-carousel img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: none;
+    height: 100%;
+    object-fit: cover; /* Ensure full image is shown */
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 2s ease-in-out; /* Slower transition */
 }
 
 .service-carousel img.active {
     opacity: 1;
-    display: block;
 }
 
-/* Centered Text and Adjusted Font Size */
+/* Centered Text with Smaller Font */
 .service-content {
     flex: 1;
     text-align: center;
 }
 
 .service-content h3 {
-    font-size: 22px;
+    font-size: 20px; /* Slightly smaller title */
     color: #004d40;
     margin-bottom: 10px;
 }
 
 .service-content p {
-    font-size: 16px;
+    font-size: 14px; /* Smaller text */
     color: #333;
-    line-height: 1.5;
+    line-height: 1.8; /* More space between lines */
     margin-bottom: 15px;
 }
 
+/* Bullet Points - Ensure Readability */
 .service-content ul {
     list-style: none;
     padding: 0;
-    font-size: 1.2rem;
-    line-height: 2; /* Keeps spacing between lines */
+    font-size: 14px;
+    line-height: 1.8;
 }
 
+.service-content ul li {
+    margin-bottom: 5px;
+}
+
+/* Pricing Text */
 .price {
-    font-size: 1.4rem;
+    font-size: 16px;
     font-weight: bold;
     margin: 20px 0;
 }
@@ -717,13 +724,14 @@ footer {
 
 .btn {
     background: #004d40;
-    padding: 15px;
+    padding: 12px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 14px;
     width: 100%; /* Full row width */
+    max-width: 250px; /* Keeps it structured */
     text-align: center;
     transition: background 0.3s ease;
 }
@@ -752,5 +760,6 @@ footer {
 
     .btn {
         width: 100%;
+        max-width: 100%; /* Ensure button is full width */
     }
 }
