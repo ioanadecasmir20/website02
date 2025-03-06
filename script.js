@@ -64,22 +64,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const images = carousel.querySelectorAll("img");
         let currentIndex = 0;
 
+        if (images.length < 2) return; // ✅ Prevents running on single-image carousels
+
         function showNextImage() {
-            if (images.length === 0) return; // ✅ Prevents errors if there are no images
-
-            // ✅ Ensure all images exist before modifying classList
-            let currentImage = images[currentIndex];
-            let nextIndex = (currentIndex + 1) % images.length;
-            let nextImage = images[nextIndex];
-
-            if (currentImage && nextImage) {
-                currentImage.classList.remove("active");
-                nextImage.classList.add("active");
-            }
-
-            currentIndex = nextIndex; // ✅ Update index
+            images[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add("active");
         }
 
-        setInterval(showNextImage, 4000); // ✅ Slow transition every 4 seconds
+        // ✅ Set a unique interval for each carousel
+        setInterval(showNextImage, 4000);
     });
 });
