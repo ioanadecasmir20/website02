@@ -57,4 +57,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     setInterval(showNextSlide, 4000);
+
+    const carousels = document.querySelectorAll(".service-carousel");
+
+    carousels.forEach(carousel => {
+        let images = carousel.querySelectorAll("img");
+        let currentIndex = 0;
+
+        setInterval(() => {
+            images[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add("active");
+        }, 3000); // Change image every 3 seconds
+    });
 });
