@@ -974,6 +974,14 @@ footer {
     color: #333;
 }
 
+.info-card a {
+    color: #004d40;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent; /* ✅ Subtle underline effect */
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
 /* ✅ Responsive Layout */
 @media (max-width: 1024px) {
     #contact-info .container {
