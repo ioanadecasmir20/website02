@@ -892,24 +892,16 @@ footer {
     }
 }
 
-/* ✅ Hero Section */
+/* ✅ Hero Section - Adjusted Darker Green */
 #contact-hero {
     background: url('images/contact-hero.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 80px 5%;
-    background-color: #003d33; /* Darker Green */
+    background-color: #005245; /* Slightly Darker Green */
 }
 
-#contact-hero h1 {
-    font-size: 2.5em;
-}
-
-#contact-hero p {
-    font-size: 1.2em;
-}
-
-/* ✅ Contact Details Section */
+/* ✅ Contact Details */
 #contact-details .container {
     display: flex;
     justify-content: center;
@@ -930,23 +922,8 @@ footer {
     flex: 1;
 }
 
-.contact-card h2 {
-    color: #004d40;
-}
-
-.contact-card a {
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #004d40;
-}
-
-.contact-card a:hover {
-    text-decoration: underline;
-}
-
-/* ✅ Additional Information */
-#contact-info {
+/* ✅ Information Cards */
+#contact-info .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -955,19 +932,18 @@ footer {
     padding: 40px 5%;
 }
 
-.info-box {
-    background: #ffffff;
+.info-card {
+    background: white;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    text-align: center;
 }
 
-.info-box h2 {
-    color: #004d40;
-}
-
+/* ✅ Responsive */
 @media (max-width: 768px) {
-    #contact-info {
-        grid-template-columns: 1fr;
+    #contact-details .container,
+    #contact-info .container {
+        flex-direction: column;
     }
 }
