@@ -999,7 +999,7 @@ footer {
 /* ✅ Hero Section */
 #terms-hero {
     background: #e0f2f1;
-    text-align: left;
+    text-align: center;
     padding: 60px 5%;
 }
 
@@ -1026,6 +1026,7 @@ footer {
 
 #terms-content h2 {
     color: #004d40;
+    text-align: left;
     font-size: 22px;
     margin-top: 20px;
 }
@@ -1052,7 +1053,7 @@ footer {
 /* ✅ Hero Section */
 #privacy-hero {
     background: #e0f2f1;
-    text-align: left;
+    text-align: center;
     padding: 60px 5%;
 }
 
@@ -1079,6 +1080,7 @@ footer {
 
 #privacy-content h2 {
     color: #004d40;
+    text-align: left;
     font-size: 22px;
     margin-top: 20px;
 }
