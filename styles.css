@@ -41,28 +41,29 @@ p {
     z-index: 1000;
     max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box; /* ✅ Prevent layout issues */
 }
 
-/* Logo - Move it slightly left */
+/* ✅ Logo - Prevents Shrinking */
 .white-header .logo {
-    flex: 1; 
+    flex: 1;
     display: flex;
     align-items: center;
     min-width: 120px;
+    flex-shrink: 0; /* ✅ Prevents shrinking */
 }
 
-/* Adjust Logo Size */
+/* ✅ Adjust Logo Size */
 .white-header .logo img {
     max-width: 140px;
     height: auto;
 }
 
-/* Navigation */
+/* ✅ Navigation */
 .white-header nav {
     flex: 2;
     display: flex;
     justify-content: center;
-    min-width: 350px;
 }
 
 .white-header nav ul {
@@ -71,7 +72,7 @@ p {
     gap: 20px; 
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* ✅ Prevents layout breaking */
 }
 
 .white-header nav a {
@@ -86,15 +87,17 @@ p {
     color: #2e7d32;
 }
 
-/* Contact Button - Aligns to Right */
+/* ✅ Contact Button - Aligns to Right */
 .header-contact {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     min-width: 180px;
+    flex-shrink: 0; /* ✅ Prevents shrinking */
 }
 
+/* ✅ Phone Button - Ensure Visibility */
 .phone-btn {
     background: #004d40;
     color: white;
@@ -106,14 +109,14 @@ p {
     white-space: nowrap;
     font-size: 14px;
     text-align: center;
-    min-width: 150px;
-    max-width: 100%;
+    width: auto; /* ✅ Prevents unnecessary shrinking */
 }
 
 .phone-btn:hover {
     background: #2e7d32;
 }
 
+/* ✅ Mobile Optimization */
 @media (max-width: 1024px) {
     .white-header {
         flex-direction: column;
