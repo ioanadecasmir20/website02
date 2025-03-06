@@ -781,7 +781,6 @@ footer {
         display: block;
     }
 
-
     .btn {
         width: 100%;
         max-width: 100%;
@@ -833,19 +832,19 @@ footer {
 /* ✅ Job Description */
 .job-content {
     flex: 1;
-    text-align: left;
+    text-align: center;
 }
 
 .job-content h3 {
-    font-size: 22px;
+    font-size: 20px;
     color: #004d40;
     margin-bottom: 10px;
 }
 
 .job-content p {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8;
     margin-bottom: 15px;
 }
 
@@ -853,8 +852,9 @@ footer {
 .job-content ul {
     list-style: none;
     padding: 0;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.8;
+    text-align: center; /* Ensures readability */
 }
 
 .job-content ul li {
@@ -877,16 +877,15 @@ footer {
         padding: 20px;
     }
 
-    .job-image {
-        width: 100%;
-        height: auto;
+    .job-content ul {
+        text-align: center;
     }
 
     .job-content ul li {
-        text-align: left;
-        margin-left: 20px;
+        text-align: center;
+        margin-left: 0;
     }
-
+    
     .btn {
         width: 100%;
         max-width: 100%;
