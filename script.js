@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const header = document.querySelector(".white-header");
+
+    // ✅ Sticky Header on Scroll
     window.addEventListener("scroll", function() {
         if (window.scrollY > 50) {
             header.classList.add("scrolled");
@@ -8,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Mobile Menu Toggle
+    // ✅ Mobile Menu Toggle
     const menuToggle = document.querySelector(".menu-toggle");
     const mobileMenu = document.querySelector("nav");
 
@@ -18,22 +20,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Smooth Page Transitions
+    // ✅ Smooth Page Transitions
     const links = document.querySelectorAll("a");
     links.forEach(link => {
         link.addEventListener("click", function(event) {
             if (this.getAttribute("href") !== "#") {
-                event.preventDefault(); // Stop default navigation
+                event.preventDefault(); 
                 const href = this.getAttribute("href");
                 document.body.classList.add("fade-out");
                 setTimeout(() => {
-                    window.location.href = href; // Navigate after fade effect
+                    window.location.href = href; 
                 }, 300);
             }
         });
     });
 
-    // Reviews Section Animation
+    // ✅ Reviews Section Animation
     const reviews = document.querySelectorAll(".review-card");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -47,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(review);
     });
 
+    // ✅ Service Carousels (Multiple)
     const carousels = document.querySelectorAll(".service-carousel");
 
     carousels.forEach(carousel => {
@@ -61,7 +64,20 @@ document.addEventListener("DOMContentLoaded", function() {
             images[currentIndex].classList.add("active");
         }
 
-        // ✅ Set a unique interval for each carousel
-        setInterval(showNextImage, 4000);
+        setInterval(showNextImage, 4000); // ✅ Slower transition every 4 sec
     });
+
+    // ✅ Hero Section Carousel (About Page)
+    const heroSlides = document.querySelectorAll(".carousel-slide");
+    let heroIndex = 0;
+
+    if (heroSlides.length > 1) {
+        function showNextHeroSlide() {
+            heroSlides[heroIndex].classList.remove("active");
+            heroIndex = (heroIndex + 1) % heroSlides.length;
+            heroSlides[heroIndex].classList.add("active");
+        }
+
+        setInterval(showNextHeroSlide, 5000); // ✅ Change hero image every 5 seconds
+    }
 });
