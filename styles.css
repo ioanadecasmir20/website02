@@ -892,15 +892,16 @@ footer {
     }
 }
 
-/* ✅ Hero Section - Adjusted Darker Green */
+/* ✅ Hero Section */
 #contact-hero {
-    color: white;
+    background: none; /* Removes background color */
     text-align: center;
-    padding: 80px 5%;
-    background-color: #7dc7a1; /* Slightly Darker Green */
+    padding: 60px 5%;
+    border-bottom: 4px solid #004d40; /* Dark green separator line */
+    color: #004d40; /* Matches other pages */
 }
 
-/* ✅ Contact Details */
+/* ✅ Contact Details Row */
 #contact-details .container {
     display: flex;
     justify-content: center;
@@ -911,9 +912,10 @@ footer {
     padding: 40px 5%;
 }
 
+/* ✅ Contact Cards */
 .contact-card {
     background: white;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
@@ -921,10 +923,34 @@ footer {
     flex: 1;
 }
 
+.contact-card h2 {
+    font-size: 20px;
+    color: #004d40;
+}
+
+.contact-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* ✅ Links Styling (Match Other Pages) */
+.contact-card a {
+    color: #004d40;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-card a:hover {
+    color: #2e7d32; /* Matches hover styles on other pages */
+    text-decoration: underline;
+}
+
 /* ✅ Information Cards */
 #contact-info .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -933,10 +959,20 @@ footer {
 
 .info-card {
     background: white;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
+}
+
+.info-card h2 {
+    font-size: 18px;
+    color: #004d40;
+}
+
+.info-card p, .info-card ul {
+    font-size: 14px;
+    color: #333;
 }
 
 /* ✅ Responsive */
