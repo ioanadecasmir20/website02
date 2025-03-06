@@ -898,6 +898,7 @@ footer {
     color: white;
     text-align: center;
     padding: 80px 5%;
+    background-color: #003d33; /* Darker Green */
 }
 
 #contact-hero h1 {
@@ -914,7 +915,7 @@ footer {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 40px 5%;
 }
