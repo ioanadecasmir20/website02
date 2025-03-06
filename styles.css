@@ -949,7 +949,7 @@ footer {
 /* ✅ Information Cards */
 #contact-info .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ✅ Auto adjusts layout */
+    grid-template-columns: repeat(3, 1fr); /* ✅ Auto adjusts layout */
     gap: 20px;
     max-width: 1200px;
     margin: auto;
