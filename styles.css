@@ -66,19 +66,6 @@ p {
     justify-content: center;
 }
 
-.white-header nav.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 200px;
-    background: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 5px;
-}
-
 .white-header nav ul {
     list-style: none;
     display: flex;
@@ -217,7 +204,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #e0f2f1;
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
@@ -271,7 +257,7 @@ p {
 
 .service-card img {
     width: 100%;
-    height: auto;
+    height: 220px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
@@ -363,16 +349,6 @@ p {
     }
 }
 
-@media (max-width: 768px) {
-    .reviews-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .review-card {
-        width: 100%;
-    }
-}
-
 /* Footer */
 /* ✅ Minimal & Clean Footer */
 footer {
@@ -461,13 +437,11 @@ footer {
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    z-index: 1;
 }
 
 /* ✅ Active Slide */
 .carousel-slide.active {
     opacity: 1;
-    z-index: 2;
 }
 
 /* ✅ Ensure Hero Content Stays Above the Carousel */
@@ -1019,7 +993,6 @@ footer {
     #contact-details .container,
     #contact-info .container {
         grid-template-columns: 1fr; /* ✅ 1 card per row on small screens */
-        flex-direction: column;
     }
 }
 
