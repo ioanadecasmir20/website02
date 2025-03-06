@@ -995,3 +995,56 @@ footer {
         grid-template-columns: 1fr; /* ✅ 1 card per row on small screens */
     }
 }
+
+/* ✅ Hero Section */
+#terms-hero {
+    background: #e0f2f1;
+    text-align: center;
+    padding: 60px 5%;
+}
+
+#terms-hero h1 {
+    color: #004d40;
+    font-size: 32px;
+}
+
+#terms-hero p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* ✅ Terms Content */
+#terms-content {
+    background: white;
+    padding: 40px 5%;
+}
+
+#terms-content .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+#terms-content h2 {
+    color: #004d40;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+#terms-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+#terms-content a {
+    color: #004d40;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+#terms-content a:hover {
+    color: #2e7d32;
+    border-bottom: 1px solid #2e7d32;
+}
