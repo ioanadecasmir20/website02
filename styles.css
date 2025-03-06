@@ -894,11 +894,10 @@ footer {
 
 /* ✅ Hero Section - Adjusted Darker Green */
 #contact-hero {
-    background: url('images/contact-hero.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 80px 5%;
-    background-color: #7fcb56; /* Slightly Darker Green */
+    background-color: #7dc7a1; /* Slightly Darker Green */
 }
 
 /* ✅ Contact Details */
