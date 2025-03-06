@@ -409,13 +409,48 @@ footer {
 
 /* ✅ About Us Hero Section */
 #about-hero {
-    height: 50vh;
+    position: relative;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('images/about-bg.jpg') no-repeat center center/cover;
-    color: white;
     text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+/* ✅ Carousel Container */
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ✅ Carousel Slide - Background Images */
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* ✅ Active Slide */
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* ✅ Ensure Hero Content Stays Above the Carousel */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* ✅ Introduction Section */
