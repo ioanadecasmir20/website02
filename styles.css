@@ -640,6 +640,7 @@ footer {
 }
 
 /* Service Section */
+/* Service Section */
 .service {
     display: flex;
     align-items: center;
@@ -655,8 +656,8 @@ footer {
 /* Fix Image Size - Ensure Full Display */
 .service-carousel {
     position: relative;
-    width: 500px; /* Fixed width */
-    height: auto; /* Allow height to adjust */
+    width: 500px;
+    height: 350px; /* Fixed height for consistency */
     overflow: hidden;
     border-radius: 10px;
 }
@@ -664,7 +665,7 @@ footer {
 .service-carousel img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; /* Ensures image fills container */
     position: absolute;
     top: 0;
     left: 0;
@@ -683,15 +684,15 @@ footer {
 }
 
 .service-content h3 {
-    font-size: 20px; /* Slightly smaller title */
+    font-size: 20px;
     color: #004d40;
     margin-bottom: 10px;
 }
 
 .service-content p {
-    font-size: 14px; /* Smaller text */
+    font-size: 14px;
     color: #333;
-    line-height: 1.8; /* More space between lines */
+    line-height: 1.8;
     margin-bottom: 15px;
 }
 
@@ -701,6 +702,7 @@ footer {
     padding: 0;
     font-size: 14px;
     line-height: 1.8;
+    text-align: center; /* Ensures readability */
 }
 
 .service-content ul li {
@@ -724,14 +726,13 @@ footer {
 
 .btn {
     background: #004d40;
-    padding: 12px;
+    padding: 12px 20px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     font-weight: bold;
     font-size: 14px;
-    width: 100%; /* Full row width */
-    max-width: 250px; /* Keeps it structured */
+    max-width: 250px;
     text-align: center;
     transition: background 0.3s ease;
 }
@@ -753,13 +754,17 @@ footer {
         height: auto;
     }
 
+    .service-content ul {
+        text-align: center;
+    }
+
     .service-content ul li {
-        text-align: left;
-        margin-left: 20px;
+        text-align: center;
+        margin-left: 0;
     }
 
     .btn {
         width: 100%;
-        max-width: 100%; /* Ensure button is full width */
+        max-width: 100%;
     }
 }
