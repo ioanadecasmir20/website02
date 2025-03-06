@@ -831,15 +831,19 @@ footer {
 .job-image {
     flex: 1;
     width: 500px;
-    height: 350px;
     overflow: hidden;
     border-radius: 10px;
+    display: flex;
+    justify-content: center; /* ✅ Centers image inside */
+    align-items: center;
 }
 
 .job-image img {
     width: 100%;
-    height: 220px;
+    height: auto;
+    max-height: 350px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 /* ✅ Job Description */
@@ -888,6 +892,20 @@ footer {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+    }
+
+    .job-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .job-image img {
+        width: 100%;
+        height: auto; /* ✅ Ensures image scales properly */
+    }
+
+    .job-content {
+        text-align: center;
     }
 
     .job-content ul {
